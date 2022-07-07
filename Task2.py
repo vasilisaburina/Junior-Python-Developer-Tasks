@@ -41,7 +41,7 @@ def count_of_animals(link='https://ru.wikipedia.org/w/index.php?title=Катег
                     next_bool = True
                     link = 'https://ru.wikipedia.org'
                     link += i[i.find(') (<a href="/w/index.php?title=') + 12:]
-                    link = link[:link.find(' title=')-1]
+                    link = link[:link.find(' title=') - 1]
                     link = link.replace('amp;', '')
                     res = requests.get(link)
                 else:
